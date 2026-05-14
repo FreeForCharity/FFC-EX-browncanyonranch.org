@@ -2,27 +2,24 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   output: 'export',
+  // Generate <route>/index.html so static hosts serve trailing-slash URLs correctly
+  trailingSlash: true,
   // Images configuration
   images: {
     // This allows all images, local or external, to load without optimization
     unoptimized: true,
-    // Use remotePatterns instead of deprecated domains
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'ffcworkingsite1.org',
+        hostname: 'browncanyonranch.org',
       },
       {
         protocol: 'https',
-        hostname: 'staging.freeforcharity.org',
+        hostname: 'staging.browncanyonranch.org',
       },
       {
         protocol: 'https',
-        hostname: 'freeforcharity.org',
-      },
-      {
-        protocol: 'https',
-        hostname: 'static.vecteezy.com',
+        hostname: 'coronadonationalforestheritagesociety.org',
       },
     ],
   },

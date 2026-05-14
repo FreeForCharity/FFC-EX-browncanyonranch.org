@@ -1,85 +1,80 @@
-/* Fonts are now loaded via next/font in layout.tsx for optimal performance */
 @import 'tailwindcss';
 
 :root {
-  /* Brand tokens */
-  --ffc-primary: #2a6682;
-  --ffc-accent: #f58629;
-  --ffc-yellow: #f5c045;
-  --ffc-black: #000000;
-  --ffc-white: #ffffff;
+  /* Brown Canyon Ranch — Sonoran adobe palette */
+  --bcr-ink: #2c2419; /* dark walnut */
+  --bcr-paper: #f8f1e4; /* warm cream */
+  --bcr-paper-deep: #ede2cc; /* warmer cream surface */
+  --bcr-adobe: #b85c3a; /* adobe terracotta */
+  --bcr-adobe-deep: #8f4128;
+  --bcr-juniper: #6e7a52; /* sage / juniper green */
+  --bcr-stone: #8a7a64; /* warm stone */
+  --bcr-sky: #9bb3c9; /* Huachuca dawn sky */
+  --bcr-rule: #d7cdb8; /* hairline rule */
 
-  /* Layout */
-  --ffc-container: 1248px;
-  --ffc-radius-xl: 20px;
+  --bcr-container: 1080px;
+}
+
+@theme inline {
+  --color-ink: var(--bcr-ink);
+  --color-paper: var(--bcr-paper);
+  --color-paper-deep: var(--bcr-paper-deep);
+  --color-adobe: var(--bcr-adobe);
+  --color-adobe-deep: var(--bcr-adobe-deep);
+  --color-juniper: var(--bcr-juniper);
+  --color-stone: var(--bcr-stone);
+  --color-sky: var(--bcr-sky);
+  --color-rule: var(--bcr-rule);
+
+  --container: var(--bcr-container);
+
+  --font-serif-display: var(--font-cantata-one);
+  --font-serif: var(--font-faustina);
+  --font-sans: var(--font-lato);
 }
 
 html,
 body {
-  scroll-behavior: smooth !important;
-}
-
-@theme inline {
-  /* Tailwind design tokens mapped to brand variables */
-  --color-primary: var(--ffc-primary);
-  --color-accent: var(--ffc-accent);
-  --color-yellow: var(--ffc-yellow);
-  --color-ink: var(--ffc-black);
-  --color-paper: var(--ffc-white);
-
-  --radius-xl: var(--ffc-radius-xl);
-  --container: var(--ffc-container);
-
-  /* Fonts (provided via next/font and CSS variables on <body>) */
-  --font-serif-display: var(--font-faustina);
-  --font-serif: var(--font-fauna-one);
-  --font-sans: var(--font-lato);
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-faustina), serif !important;
-  background: var(--color-paper);
-  color: var(--color-ink);
-}
-#header {
-  font-family: var(--font-open-sans), sans-serif !important;
-}
-#aria-font {
-  font-family: var(--font-open-sans), sans-serif !important;
-}
-#lato-font {
-  font-family: var(--font-lato), sans-serif !important;
-}
-#montserrat-font {
-  font-family: var(--font-montserrat), sans-serif !important;
-}
-#abeezee {
-  font-family: var(--font-open-sans), sans-serif !important;
-}
-/* Segoe UI is a system font - use native system font stack for best performance (only used 2x) */
-#segoe-font {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
-}
-#cinzel {
-  font-family: var(--font-cinzel), serif !important;
-}
-#fauna-font {
-  font-family: var(--font-fauna-one), serif !important;
-}
-#cantata-font {
-  font-family: var(--font-cantata-one), serif !important;
-}
-#raleway-font {
-  font-family: var(--font-raleway), sans-serif !important;
-}
-#courier-font {
-  font-family: ui-monospace, 'Courier New', monospace !important;
-}
-#faustina-font {
-  font-family: var(--font-faustina), serif !important;
+  font-family: var(--font-faustina), Georgia, 'Times New Roman', serif;
+  background: var(--bcr-paper);
+  color: var(--bcr-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Screen reader only utility class for accessibility */
+a {
+  color: inherit;
+}
+
+/* Container helper */
+.bcr-container {
+  max-width: var(--bcr-container);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Hairline divider */
+.bcr-rule {
+  height: 1px;
+  background: var(--bcr-rule);
+  width: 100%;
+}
+
+/* Prose rhythm */
+.bcr-prose p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--bcr-ink);
+}
+.bcr-prose p + p {
+  margin-top: 1rem;
+}
+
+/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -90,73 +85,4 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-}
-
-@keyframes fadeTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeRight {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fadeTop {
-  animation: fadeTop 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
-}
-
-.animate-fadeLeft {
-  animation: fadeLeft 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
-}
-
-.animate-fadeRight {
-  animation: fadeRight 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
-}
-
-/* Utilities aligned to Figma */
-.ffc-container {
-  max-width: var(--container);
-  margin-inline: auto;
-  padding-inline: 16px;
-}
-
-.clip-diagonal {
-  clip-path: polygon(0 80%, 100% 50%, 100% 100%, 0% 100%);
-}
-
-.ffc-card {
-  @apply bg-paper border-4 rounded-xl shadow;
-}
-
-/* Hide scrollbar globally */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
