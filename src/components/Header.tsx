@@ -62,7 +62,7 @@ const Header: React.FC = () => {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-ink/80 hover:text-adobe-deep transition-colors border-b border-transparent hover:border-adobe pb-0.5"
+                  className="text-ink/80 hover:text-adobe-deep transition-colors border-b border-transparent hover:border-adobe pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-adobe rounded-sm"
                 >
                   {item.label}
                 </Link>
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
                 href="https://www.coronadonationalforestheritagesociety.org/donate"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-sm bg-adobe text-paper px-3 py-2 text-[0.85rem] tracking-wide hover:bg-adobe-deep transition-colors"
+                className="inline-flex items-center rounded-sm bg-adobe text-paper px-3 py-2 text-[0.85rem] tracking-wide hover:bg-adobe-deep transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-adobe"
               >
                 Donate
               </a>
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="lg:hidden inline-flex items-center justify-center rounded border border-rule px-3 py-2 text-sm text-ink/80 hover:bg-paper-deep"
+          className="lg:hidden inline-flex items-center justify-center rounded border border-rule px-3 py-2 text-sm text-ink/80 hover:bg-paper-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-adobe"
           aria-expanded={isOpen ? 'true' : 'false'}
           aria-controls="mobile-nav"
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                 <Link
                   href={item.href}
                   onClick={close}
-                  className="block px-2 py-3 text-ink/85 hover:bg-paper-deep rounded"
+                  className="block px-2 py-3 text-ink/85 hover:bg-paper-deep rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-adobe"
                 >
                   {item.label}
                 </Link>
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={close}
-                className="block px-2 py-3 text-adobe-deep font-semibold hover:bg-paper-deep rounded"
+                className="block px-2 py-3 text-adobe-deep font-semibold hover:bg-paper-deep rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-adobe"
               >
                 Donate
               </a>
