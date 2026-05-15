@@ -17,7 +17,7 @@ export default function TermsOfService() {
           Terms of Service
         </h1>
       </header>
-      <section className="bcr-container py-16 bcr-prose max-w-3xl">
+      <section className="mx-auto px-4 py-16 bcr-prose max-w-3xl">
         <p>
           The browncanyonranch.org website is provided as an informational resource by the Friends
           of the Brown Canyon Ranch — a volunteer chapter of the Coronado National Forest Heritage

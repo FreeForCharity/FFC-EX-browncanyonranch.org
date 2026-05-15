@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
           Privacy Policy
         </h1>
       </header>
-      <section className="bcr-container py-16 bcr-prose max-w-3xl">
+      <section className="mx-auto px-4 py-16 bcr-prose max-w-3xl">
         <p>
           The Friends of the Brown Canyon Ranch respects your privacy. This website is a simple
           static informational site. We do not collect personal data through the site, do not set
