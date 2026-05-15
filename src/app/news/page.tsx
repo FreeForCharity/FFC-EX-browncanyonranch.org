@@ -45,10 +45,39 @@ export default function NewsPage() {
           News items
         </h2>
         {items.length === 0 ? (
-          <p className="text-[1.05rem] leading-[1.75] text-ink/75 font-(family-name:--font-faustina) max-w-2xl">
-            No news posts at this time. Please check back, or visit our Facebook page for the latest
-            updates on volunteer days and the Western Heritage Program.
-          </p>
+          <div className="border border-dashed border-rule rounded-md px-8 py-12 text-center max-w-2xl">
+            {/* Newspaper / bulletin icon */}
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.25"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="mx-auto mb-5 h-10 w-10 text-stone/40"
+            >
+              <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
+              <path d="M18 14h-8M15 18h-5M10 6h8v4h-8z" />
+            </svg>
+            <p className="font-(family-name:--font-cantata-one) text-ink text-[1.2rem] mb-3">
+              No posts yet — check back soon
+            </p>
+            <p className="font-(family-name:--font-faustina) text-[1rem] leading-[1.75] text-ink/70 max-w-[46ch] mx-auto">
+              Volunteer days, program updates, and ranch happenings will be posted here. In the
+              meantime, follow us on{' '}
+              <a
+                href="https://www.facebook.com/Friends-of-the-Brown-Canyon-Ranch-106245609506322"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-adobe-deep underline underline-offset-4 decoration-rule hover:decoration-adobe"
+              >
+                Facebook
+              </a>{' '}
+              for the most timely updates.
+            </p>
+          </div>
         ) : (
           <ul className="divide-y divide-rule border-y border-rule">
             {items.map((item) => (

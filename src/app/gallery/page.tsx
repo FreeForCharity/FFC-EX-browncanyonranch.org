@@ -61,6 +61,41 @@ export default function GalleryPage() {
         <h2 id="gallery-grid" className="sr-only">
           Photographs
         </h2>
+
+        {/* Coming-soon state — photos will replace this grid once supplied */}
+        <div className="mb-14 border-2 border-dashed border-rule rounded-md px-8 py-12 text-center max-w-2xl mx-auto">
+          {/* Camera icon */}
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.25"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="mx-auto mb-5 h-12 w-12 text-stone/50"
+          >
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
+          <p className="font-(family-name:--font-cantata-one) text-ink text-[1.25rem] mb-3">
+            Photography coming soon
+          </p>
+          <p className="font-(family-name:--font-faustina) text-[1rem] leading-[1.7] text-ink/70 max-w-[48ch] mx-auto">
+            We&rsquo;re gathering high-resolution photos of the ranch, wildlife, and heritage
+            programs. Have a great shot from a visit?{' '}
+            <a
+              href="mailto:info@browncanyonranch.org"
+              className="text-adobe-deep underline underline-offset-4 decoration-rule hover:decoration-adobe"
+            >
+              Share it with us
+            </a>
+            .
+          </p>
+        </div>
+
+        {/* Caption list so visitors still learn about what they can expect */}
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {photos.map((p) => (
             <li
@@ -68,10 +103,23 @@ export default function GalleryPage() {
               className="border border-rule bg-paper-deep/40 rounded-sm overflow-hidden"
             >
               <div
-                className="aspect-[4/3] bg-gradient-to-br from-paper-deep via-paper to-stone/20 flex items-center justify-center text-stone font-(family-name:--font-lato) text-[0.72rem] uppercase tracking-[0.2em]"
+                className="aspect-[4/3] bg-gradient-to-br from-paper-deep/60 via-paper to-stone/10 flex flex-col items-center justify-center gap-2 px-4"
                 aria-hidden="true"
               >
-                Photograph
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-8 w-8 text-stone/30"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
               </div>
               <div className="p-5">
                 <h3 className="font-(family-name:--font-cantata-one) text-ink text-[1.05rem]">
