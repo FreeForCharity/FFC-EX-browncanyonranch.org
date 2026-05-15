@@ -45,12 +45,21 @@ export const metadata: Metadata = {
     title: 'Friends of the Brown Canyon Ranch',
     description:
       'Volunteers preserving a historic ranch in the Huachuca Mountains foothills of Southern Arizona.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Friends of the Brown Canyon Ranch',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Friends of the Brown Canyon Ranch',
     description:
       'Volunteers preserving a historic ranch in the Huachuca Mountains foothills of Southern Arizona.',
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [{ url: `${basePath}/icon.svg`, type: 'image/svg+xml' }],
