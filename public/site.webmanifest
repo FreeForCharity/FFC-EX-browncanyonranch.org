@@ -1,8 +1,0 @@
-{
-  "name": "Friends of the Brown Canyon Ranch",
-  "short_name": "BCR",
-  "icons": [{ "src": "/icon.svg", "type": "image/svg+xml", "sizes": "any" }],
-  "theme_color": "#b85c3a",
-  "background_color": "#f8f1e4",
-  "display": "standalone"
-}
